@@ -1,0 +1,62 @@
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+==================================
+Transferring Description
+==================================
+Description is empty, nothing to transfer.
+==================================
+Transferring Milestones
+==================================
+==================================
+Transferring Labels
+==================================
+NOTE (2022): GitHub descriptions are limited to 100 characters, and do not accept 4-byte Unicode
+Creating: has attachment
+Creating: gitlab merge request
+==================================
+Transferring Releases
+==================================
+Transferring 0 releases
+==================================
+Transferring Issues
+==================================
+Transferring 4 issues.
+
+Migrating issue #1 ('TestIssuePOC')...
+	Migrating issue comments...
+	...Done creating comments (migrated 0 comments, skipped 1 comments)
+	...DONE migrating issue #1.
+
+Migrating issue #2 ('POC#2')...
+	Migrating issue comments...
+	...no comments available, nothing to migrate.
+	...DONE migrating issue #2.
+
+Migrating issue #3 ('POC#3')...
+	Migrating issue comments...
+	...no comments available, nothing to migrate.
+	...DONE migrating issue #3.
+
+Migrating issue #4 ('POC#4')...
+	Migrating issue comments...
+	...no comments available, nothing to migrate.
+	...DONE migrating issue #4.
+DONE creating issues.
+
+	Statistics:
+	Total nr. of issues: 4
+	Nr. of used placeholder issues: 0
+	Nr. of used replacement issues: 0
+	Nr. of issue migration fails: 0
+==================================
+Transferring Merge Requests
+==================================
+Transferring 1 merge requests
+Creating pull request: !1 - Poc branch
+Pull request #1 - attempt to create has failed, assume 'poc-branch' has already been merged => cannot migrate pull request, creating an issue instead.
+	Migrating pull request comments...
+	...Done creating comments (migrated 5 comments, skipped 0 comments)
+
+
+Transfer complete!
