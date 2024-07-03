@@ -1,0 +1,36 @@
+resource initiativeDefinition 'Microsoft.Authorization/policySetDefinitions@2019-09-01' = {
+  name: initiativeDefinitionName
+  properties: {
+    policyType: 'Custom'
+    displayName: initiativeDefinitionName
+    description: 'Initiative Definition for Resource Locatoin and VM SKUs'
+    metadata: {
+      category: 'BICEP Example Initiative'
+    }
+    parameters: {
+      listOfAllowedLocations: {
+        type: 'Array'
+        metadata: ({
+          description: 'The List of Allowed Locations for Resource Groups and Resources.'
+          strongtype: 'location'
+          displayName: 'Allowed Locations'
+        })
+      }
+      listOfAllowedSKUs: {
+        type: 'Array'
+        metadata: any({
+          description: 'The List of Allowed SKUs for Virtual Machines.'
+          strongtype: 'vmSKUs'
+          displayName: 'Allowed Virtual Machine Size SKUs'
+        })
+      }
+    }
+    policyDefinitions: [
+      {
+        policyDefinitionId: '/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988'
+        parameters: {
+          listOfAllowedLocations: {
+            value: '[parameters(\'listOfAllowedLocations\')]'
+          }
+        }
+      }
